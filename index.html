@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Legal Document Assistant</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 Legal Document Assistant</h1>
+
+    <div class="upload-box">
+      <h3>Upload Legal Document (PDF)</h3>
+      <input type="file" id="pdfFile">
+      <button onclick="uploadFile()">Upload</button>
+    </div>
+
+    <div id="results" class="hidden">
+      <h2>Summary</h2>
+      <p id="summary"></p>
+
+      <h2>Important Clauses</h2>
+      <ul id="clauses"></ul>
+
+      <h2>Potential Risks</h2>
+      <ul id="risks"></ul>
+
+      <h2>Ask a Question</h2>
+      <input type="text" id="question" placeholder="e.g., Can I terminate this contract early?">
+      <button onclick="askQuestion()">Ask</button>
+      <p><b>Answer:</b> <span id="answer"></span></p>
+      <p><b>Confidence:</b> <span id="confidence"></span></p>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
